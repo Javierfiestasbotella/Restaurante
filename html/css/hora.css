@@ -1,0 +1,56 @@
+body{
+    background-image: url(imagenescss/ramita%2520de%2520calafate.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+*{
+    color: white;
+    align-content: center;
+    text-align: center;
+    list-style: none;
+    
+}
+.titulo{
+ border: solid;
+    padding: 30px;
+    text-align: center;
+    font-size: 80px;
+    background: green;
+    opacity: 0.7;
+    
+    
+    
+}
+#contenedor{
+    border: solid;
+    margin-right: 110px;
+    margin-left: 110px;
+    
+}
+.comida{
+    background:#cb459d;
+}
+.cena{
+    background:#cb459d;
+    
+}
+.lunes,.martes,.miercoles,.jueves,.viernes,.sabado,.domingo{
+   padding: 15px;
+        float: left;
+    
+}
+.comida,.cena{
+    padding: 2px;
+   
+}
+.comidas,.cenas{
+     background: #a838a8;
+    color:white;
+}
+.cerrado{
+    background: green;
+    
+}

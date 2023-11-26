@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>reservas online</title>
+    <link rel="stylesheet" href="css/reservas.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+</head>
+<body>
+        <h1>Cancela tu Reserva</h1>
+
+
+
+
+
+           <br><br><br>
+            
+            <div id="wrapper" class="container">
+            
+          <form  name="causas" action="mailcancelar.php" method="post" enctype="multipart/form-data">
+              
+              
+              
+              <fieldset legend="datos de reserva">
+                 <p> <label for="nombre">Nombre</label>
+                 <input type="text" name="nombre" placeholder="nombre"required>
+                <p> <label for="apellidos">Apellidos</label>
+                 <input type="text" name="apellidos" placeholder="apellidos"required>
+                <p> <label for="email">Email</label>
+                <input type="email" name="email" placeholder="email"required>
+              
+               <p> <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" placeholder="fecha"required><p style="color:red": >Los Domingos estamos cerrados</p> <br><br><br>
+               <p> <label for="nota">Haz un comentario</label>
+                <textarea  class="nota"type="text" row="5" cols="50"name="nota"     > </textarea>
+                  <input type="submit" name="registrarse" value="ENVIAR">
+                  <input type="reset" value="BORRAR">
+                  
+                  <input type="checkbox" name="privacidad"required/>he leido y acepto la <a href="imagenes/CLAUSULA%20P%C3%81GINA%20WEB.pdf" target="_blank"> Politica de privacidad
+                  
+                  
+                  
+                  
+                   </a> </fieldset>
+              
+              
+              
+              
+              
+          </form>  
+            
+            </div>
+            
+       <script>
+    
+    $(document).ready(function(e){
+       var tiempo= $(".hora").value;
+$(".hora").live('change', function() { 
+
+      if(tiempo==null) { 
+       alert('not empty'); 
+      } 
+
+      else if("#input:empty") { 
+       alert('empty'); 
+      } 
+     }); 
+}); 
+              
+    });
+    
+    
+    
+    </script>
+            
+  <script>
+      
+      
+      document.querySelector("input[name=fecha]").addEventListener("change",function(){
+            x=new Date(this.value);
+           if (x.getDay()==0){
+               alert("Cambie la fecha, los domingos estamos cerrados");
+           }
+  });
+    </script>
+ <script>
+     document.querySelector("input[name=fecha]").addEventListener("change",function(){
+            x=new Date(this.value);
+           if (x.getDate()<=15 && x.getDate()>=8){
+               alert("Cambie la fecha,esta semana estamos de vacaciones");
+           }
+  });
+    
+    </script>
+     <script>
+
+function viajeIn(){
+
+location.href="basereservasingles.html";
+document.getElementById("gr").click();
+}
+
+
+
+function viajeFr(){
+
+location.href="basereservasfrances.html";
+document.getElementById("fr").click();
+}
+
+
+
+function viajeAl(){
+
+location.href="basereservasalemania.html";
+document.getElementById("al").click();
+}
+
+
+
+
+
+</script>
+
+
+   
+    
+</body>
+</html>

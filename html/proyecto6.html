@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilos2.css"/>
+</head>
+
+<body>
+    
+
+  
+ <header>   
+<h1>FORMULARIO</h1>
+<p>Rellene el formulario o tambien puede enviar su C.V. porn email en la pagina principal.</p>
+</header>
+
+
+<div class="separador"></div>
+<div class="foto">foto
+no es necesaria</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<form action="datos.php" method="post" enctype="multipart/form-data">
+<fieldset>
+    <legend>
+    <b><u>
+        Datos personales/</u></b></legend><br>
+    
+    Nombre y apellidos
+    <input type="text" name="nombre" size="30" placeholder="Nombre y apellidos"required><br>
+    DNI
+     <input type="text" name="dni" size="5" placeholder="dni"><br>
+     Fecha de Nacimiento
+      <input type="text" name="fecha de nacimiento" size="30" placeholder="fecha de nacimiento"required><br>
+      Direccion
+       <input type="text" name="direccion" size="50" placeholder="direccion" required><br>
+       C.P.
+        <input type="text" name="c.p." size="5"placeholder="c.p."required><br>
+        Telefono (movil)*
+         <input type="text" name="telefono" size="10"required><br>
+         Ciudad
+          <input type="text" name="ciudad" size="10"required><br>
+          Estado civil
+           <input type="text" name="estado civl" size="15"><br> <br><br><br>/>
+              
+   
+<fieldset>
+    <legend><u><b>Datos Laborales</b>    </u></legend>
+    <br><br>
+     Nombre de la Empresa
+    <input type="text" name="nombre empresa" size="30"><br>
+    Cargo en la empresa
+     <input type="text" name="dni" size="5"><br>
+     Fecha de inicio en la empresa
+      <input type="text" name="fecha de nacimiento" size="30"><br>
+      Direccion
+       <input type="text" name="direccion" size="50"><br>
+       C.P.
+        <input type="text" name="c.p." size="5"><br><br><br>
+    
+</fieldset>
+<fieldset>
+    <legend> Enviar Datos:</legend>
+    <input type="submit" name="registrarse" value="ENVIAR">
+                  
+    </fieldset>
+</form>
+    
+ <?php
+ 
+require ("datos.php"); 
+ 
+  ?>
+
+</body>
+</html>

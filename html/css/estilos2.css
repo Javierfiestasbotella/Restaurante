@@ -1,0 +1,33 @@
+/*
+formulario
+*/
+header{
+background-color: beige;
+    text-align: center;
+    color: black;
+    border-radius: 20px; 
+ border-style: double;
+}
+.separador{
+    height: 10px;
+    
+    
+}
+legend{
+    text-align: center;
+    color: red;
+    font-style: oblique;   
+}
+.foto{
+    border-style: solid;
+    float: right;
+    border-color:black;
+    color:black;
+    height: 100px;
+    width: 100px;padding: 3px;
+    text-align: center; 
+    
+}
+body{
+    background: #d6d0d0;
+}

@@ -1,0 +1,371 @@
+/*
+Restaurante Vegetariano
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+header {
+    border: solid black;
+    color: #00ff00;
+    background-image: linear-gradient(green, rgb(61, 183, 31), green);
+    padding: 0px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 30px;
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+#cuerpo {
+    height: 1000px;
+}
+
+.texto {
+    color: white;
+    font-size: 16px;
+}
+
+#cajas {
+    padding: 10px;
+    background: transparent;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.d1 {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+body {
+    background-image: url(imagenescss/ramita%2520de%2520calafate.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: verdana;
+    color: white;
+}
+
+.fondito {
+    background-image: url(imagenescss/);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.6;
+    box-sizing: border-box;
+}
+
+#separador {
+    padding: 5px;
+}
+
+#titulo,
+#titulo2,
+.informacion2 {
+    border: solid;
+    padding: 10px;
+    border-radius: 20px;
+    background-image: linear-gradient(green, white, green);
+    opacity: 0.8;
+}
+
+#main {
+    height: 1200px;
+}
+
+.social {
+    position: fixed;
+    left: 0;
+    top: 300px;
+    z-index: 2000;
+    opacity: 0.9;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.social ul {
+    list-style: none;
+}
+
+.social ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 10px 15px;
+    text-decoration: none;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.social ul li .icon-facebook2 {
+    background: #3b5998;
+}
+
+.social ul li .icon-instagram {
+    background: #9b3f9b;
+}
+
+.social ul li .icon-twitter {
+    background: #00abf0;
+}
+
+.social ul li .icon-pinterest {
+    background: #ae181f;
+}
+
+.social ul li .icon-mail4 {
+    background: #f2ff50;
+}
+
+.social ul li .icon-phone {
+    background: #23e85f;
+}
+
+.social ul li .icon-location2 {
+    background: #6969f4;
+}
+
+.social ul li a:hover {
+    background: #000;
+    padding: 10px 30px;
+}
+
+#header {
+    margin-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+    position: relative;
+    margin-left: 300px;
+    box-sizing: border-box;
+}
+
+nav {
+    top: -20px;
+    position: absolute;
+    left: 0;
+    margin: 20px auto;
+    min-width: 1000px;
+    width: 90%;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav > ul li {
+    display: table-cell;
+}
+
+nav > ul > li:hover > ul {
+    display: block;
+    height: 100%;
+}
+/*Importante barra*/
+nav > ul > li > ul {
+    display: block;
+    position: absolute;
+    background: #7ce4c5;
+    left: 0;
+    right: 10;
+    overflow: hidden;
+    height: 0%;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+nav > ul > li > a {
+    background-color: transparent;
+}
+
+nav > ul li a {
+    color: #fff;
+    display: block;
+    line-height: 20px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+nav > ul > li > ul > li a:hover {
+    background: #5da5a2;
+}
+
+nav > ul > li > a span {
+    background: #174459;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: -55px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+nav > ul > li > a:hover > span {
+    top: 0;
+}
+
+nav ul li a .primero {
+    background: #28afd1;
+}
+
+nav ul li a .segundo {
+    background: #1d52e2;
+}
+
+nav ul li a .tercero {
+    background: #c591dd;
+}
+
+nav ul li a .cuarto {
+    background: purple;
+}
+
+nav ul li a .quinto {
+    background: #ed3b9b;
+}
+
+nav > ul > li.reservas {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#barraaceptacion {
+    display: none;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    min-height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    z-index: 99999;
+    box-sizing: border-box;
+    height: 25%;
+    margin: 0;
+}
+
+.pol {
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.inner {
+    width: 100%;
+    position: absolute;
+    padding-left: 5px;
+    font-family: verdana;
+    font-size: 15px;
+    top: 30%;
+}
+
+.inner a.ok {
+    padding: 4px;
+    color: #00ff2e;
+    text-decoration: none;
+}
+
+.inner a.info {
+    padding-left: 5px;
+    text-decoration: none;
+    color: #faff00;
+}
+
+#contenedor {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        width: 100%;
+        min-width: 0;
+        margin: 20px 0;
+        position: relative;
+        text-align: center;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0;
+    }
+
+    nav > ul > li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    nav > ul > li > a {
+        padding: 0px;
+        position: relative;
+        font-size: 20px;
+        color: #fff;
+        background-color: transparent;
+
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+    nav > ul > li > ul {
+        display: block;
+        position: static;
+        background: none;
+        height: auto;
+        display: none;
+    }
+
+    nav > ul > li:hover > ul {
+        display: block;
+    }
+
+    nav > ul > li > a span {
+        display: none;
+    }
+
+    #header {
+        height: auto;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .social {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+/*______________________*/

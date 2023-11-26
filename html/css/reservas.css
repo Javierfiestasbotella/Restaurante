@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    font-size: 20px;
+    font-family:fantasy;
+}
+body{
+    background-image: url(imagenescss/ramita%2520de%2520calafate.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+#wrapper{
+  background: green;
+    opacity: 0.8;
+    width: 80%;
+    margin-left: 140px;
+}
+h1{
+    font-size: 60px;
+    text-align: center;
+    color:white;
+}
+input{
+    height: 30px;
+    
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <title>envio de emails con archivos adjuntos</title>
+ <link rel="stylesheet" href="css/g1.css">
+ <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ 
+</head>
+<body>
+ <div id="container">
+ <h1>Envíenos su C.V.  <a href="http://www.vegetarianoelcalafate.es.es">vegetarianoelcalafate.es</a></h1>
+ 
+ <form action="send.php" method="post" enctype="multipart/form-data">
+ <fieldset>
+ <legend>rellena el formulario</legend>
+ <ul>
+ <li>
+ <label for="nombre">Nombre:</label>
+ <br>
+ <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+ </li>
+<li>
+ <label for="mail">E-mail:</label>
+ <br>
+ <input type="email" id="mail" name="email" placeholder="E-mail del emisor" required>
+ </li>
+
+ <li>
+ <label for="asunto">Asunto:</label>
+ <br>
+ <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+ </li>
+ <li>
+ <label for="msn">Mensaje:</label>
+ <br>
+ <textarea name="msn" id="msn" rows="10" required></textarea>
+ </li>
+ <li>
+ <input name="registrarse" type="submit" value="Enviar">
+ </li>
+ </ul>
+ </fieldset>
+ </form>
+ </div>
+ <script>
+$(document).ready(function(){
+ $('form').submit(function(){
+ if($('input[type="text"]').val() == '' || $('input[type="email"]').val() == '' || $('input[type="file"]').val() == '' || $('textarea').val() == ''){
+ alert('Rellena todos los campos');
+ return false;
+ }
+ });
+ });
+</script>
+</body>
+</html>

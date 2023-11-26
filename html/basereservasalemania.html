@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>reservas online</title>
+    <link rel="stylesheet" href="css/reservas.css">
+    
+  
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MJWWT611Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6MJWWT611Q');
+</script>
+<body>
+        <h1>Machen sie ihre Reservierung</h1>
+           
+            <div id="idiomas">
+<nav id="es" onClick="viajeEs()"></nav>
+
+<style>
+#es{
+background-image:url("css/imagenescss/es.jpg");
+height:50px;
+width:50px;
+border:solid;
+webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+}
+
+</style>
+
+
+
+
+<nav id="gr"onClick="viajeGr()"></nav>
+
+<style>
+#gr{
+background-image:url("css/imagenescss/gr.jpg");
+height:50px;
+width:50px;
+border:solid;
+webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+}
+</style>
+
+
+
+
+
+<nav id="fr"onClick="viajeFr()"></nav>
+
+<style>
+#fr{
+background-image:url("css/imagenescss/fr.jpg");
+height:50px;
+width:50px;
+border:solid;
+webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+}
+nav{
+float:left;
+margin-left:200px;
+border:solid;
+
+}
+#fr:hover,#es:hover,#gr:hover{
+height:55px;
+width:55px;
+color: lime;
+opacity:0.6;
+transition:0.9s;
+}
+</style>
+
+
+
+
+</div>
+           <br><br><br>
+            
+            
+            <div id="wrapper" class="container">
+            
+          <form  name="causas" action="confirmar.php" method="post" enctype="multipart/form-data">
+              
+              
+              
+              <fieldset legend="booking data">
+                 <p> <label for="nombre">Name</label>
+                 <input type="text" name="nombre" placeholder="name"required>
+                <p> <label for="apellidos">Nachnamen</label>
+                 <input type="text" name="apellidos" placeholder="nachnamen"required>
+                <p> <label for="email">Email</label>
+                <input type="email" name="email" placeholder="email"required>
+               <p> <label for="telefono">Telefonnummer</label>
+                <input type="tel" name="phone" placeholder="telefonnummer"required>
+                <p> <label for="horaComida">Mittagessen</label>
+                <input type="time" name="horaComida" max="14:15" min="13:00" "hora"required>
+                <!--<p> <label for="hora">Abendessen</label>
+                <input type="time" name="hora" max="22:30" min="19:00" "hora"required>-->
+               <p> <label for="comensales">Person</label>
+                <input type="number" name="comensales" min="1" max="15"
+    placeholder="px"   required><p> <label for="fecha">Date</label>
+                <input type="date" name="fecha" placeholder="datum"required><p style="color:red": >Wir sind sonntags gescholssen</p> <br><br><br>
+               <p> <label for="nota">Schreibe deinen kommentar</label>
+                <textarea  class="nota"type="text" row="5" cols="50"name="nota"     > </textarea>
+                  <input type="submit" name="registrarse" value="SENDEN">
+                  <input type="reset" value="LÖSCHEN">
+                  
+                  <input type="checkbox" name="privacidad"required/>Ich akzeptiere die <a href="imagenes/CLAUSULA%20P%C3%81GINA%20WEB.pdf" target="_blank"> datenschutzbestimmungen.
+                  
+                  
+                  
+                  
+                   </a> </fieldset>
+              
+              
+              
+              
+              
+          </form>  
+            
+          <div>
+            <label for="adminPassword">Contraseña de Administrador:</label>
+            <input type="password" name="adminPassword" id="adminPassword" placeholder="Ingrese la contraseña del administrador">
+            <button type="button" id="btnDetenerReservas">Detener Reservas para Hoy</button>
+          </div>
+          
+          <script>
+            let esAdmin = false;
+          
+            document.getElementById("btnDetenerReservas").addEventListener("click", function() {
+              const password = document.getElementById("adminPassword").value;
+              if (password === "r3s3rv4") { // Aquí reemplaza "contrasenaAdmin" con la contraseña correcta
+                esAdmin = true;
+                const fechaHoy = new Date().toISOString().slice(0, 10);
+                localStorage.setItem("fechaDetencion", fechaHoy);
+                alert("Se han detenido las reservas para el día de hoy.");
+              } else {
+                esAdmin = false;
+                alert("Contraseña incorrecta. No tienes permiso para detener las reservas.");
+              }
+            });
+          
+            document.getElementById("formulario").addEventListener("submit", function(event) {
+              if (esAdmin) {
+                alert("Es tut uns leid, die heutigen Buchungen sind voll.");
+                event.preventDefault(); // Evita que se envíe el formulario
+              } else {
+                // Aquí puedes colocar el código para procesar la reserva normalmente si no es el administrador o si el día no está detenido.
+                // Por ejemplo, enviar los datos del formulario a un servidor, guardar la reserva en una base de datos, etc.
+              }
+            });
+          </script>
+          <script>
+    /*document.querySelector("input[name=fecha]").addEventListener("change",function(){
+            x=new Date(this.value);
+           if (x.getDate()==6) {
+              alert("El día de Reyes Cerramos. Disculpe la molestia.");
+                           this.value="";
+              
+           }
+ });*/
+            </script>
+          <script>
+
+              
+/*const fecha=new Date(document.querySelector("input[name=fecha]").value);
+ 
+if (fecha.getDay()==2 && fecha.getHours()>=16) {
+    alert("los martes por la noche estamos cerrados");
+}
+     $(document).ready(function(){ //funcion ready
+       var dia=$(".fecha").value;
+         var hora=$(".hora").value;
+         $("#formulario").submit(function() //funcion envio
+             if(dia.getDay()==2 && hora.getHours()>=16){  //funcion if
+             alert("los martes por la noche estamos cerrados");
+         } //cerramos funcion if
+         
+         }); //cerrampos funcion envio
+       }); //cerramos funcion ready*/
+    </script>
+    <script>
+      document.querySelector("input[name=fecha]").addEventListener("change", function() {
+          const selectedDate = new Date(this.value);
+          const startDate = new Date("2023-08-12"); // Fecha de inicio de las vacaciones
+          const endDate = new Date("2023-08-20");   // Fecha de fin de las vacaciones
+  
+          if (selectedDate >= startDate && selectedDate <= endDate) {
+              alert("Während der Ferienzeit vom 12. bis 20. August können leider keine Buchungen vorgenommen werden.");
+              this.value = ""; // Limpiamos la fecha seleccionada
+          }
+      });
+  </script>
+
+
+            </div>
+            
+   <script>
+      
+      
+      document.querySelector("input[name=fecha]").addEventListener("change",function(){
+            x=new Date(this.value);
+           if (x.getDay()==0){
+               alert("Ändern Sie das Datum, an Sonntagen sind wir geschlossen");
+this.value="";
+           }
+  });
+    </script>
+<script>
+  /*document.querySelector("input[name=fecha]").addEventListener("change",function(){
+          x=new Date(this.value);
+         if (x.getDate()==6) {
+              alert("Am Dreikönigstag sind wir geschlossen. Entschuldigung für die Unannehmlichkeiten.");
+                         this.value="";
+            
+         }
+});*/
+          </script>
+   
+  <script>
+
+
+function viajeEs(){
+
+location.href="basereservas.html";
+document.getElementById("es").click();
+}
+
+
+
+function viajeGr(){
+
+location.href="basereservasingles.html";
+document.getElementById("gr").click();
+}
+
+
+
+function viajeFr(){
+
+location.href="basereservasfrances.html";
+document.getElementById("fr").click();
+}
+
+
+
+
+
+</script>
+   
+            
+  
+
+
+   
+    
+</body>
+</html>
